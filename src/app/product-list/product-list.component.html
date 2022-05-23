@@ -1,0 +1,24 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <!--*ngFor div repeats for each prodict in the list-->
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}</a>
+    <!--interpolation syntax(lets some property value as text ) -->
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{product.description}}
+  </p>
+
+  <button type="button" (click)="share()"><!--eventbinding of click to share-->
+    Share
+  </button>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
